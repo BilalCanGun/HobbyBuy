@@ -1,12 +1,16 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { useState } from "react";
+import Register from "../../Components/Register";
+import Login from "../../Components/Login";
+import './Login.css'
 
 const LoginPage = () => {
+
   return (
-    <div>
-      <h1>Merhaba, LoginPage!</h1>
+    <div className="login-root">
+      <Login/>
     </div>
   );
 };
 
 export default LoginPage;
+
