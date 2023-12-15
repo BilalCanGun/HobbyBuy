@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { auth } from "../fireabase";
+import { projectAuth } from "../firebase/config";
 import "./style.css";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const signIn = (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(projectAuth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
       })
@@ -17,7 +18,9 @@ const Register = () => {
         console.log(error);
       });
   };
-
+  const handleCheckboxChange = (password) => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <div className="login-root">
@@ -33,17 +36,25 @@ const Register = () => {
             className="login-input"
           />
           <input
-            type="password"
+            type={showPassword ? 'text':'password'}
             placeholder="Şifre giriniz..."
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="login-input"
           />
+          <label className="login-showp">
+              <input
+                type="checkbox"
+                checked={showPassword}
+                onChange={handleCheckboxChange}
+              />
+             Şifreyi Göster
+            </label>
           <div className="login-container-button">
-          
-          <button type="" className="login-button" >
-            Kayıt ol
-          </button>
+            
+            <button type="" className="login-button" onclick>
+              Kayıt ol
+            </button>
           </div>
         </div>
 
@@ -53,7 +64,6 @@ const Register = () => {
             alt="image"
             className="login-img"
           />
-          
         </div>
       </form>
     </div>

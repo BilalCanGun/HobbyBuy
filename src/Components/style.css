@@ -60,3 +60,8 @@ form{
     display: flex;
   justify-content: space-between;
 }
+.login-showp{
+  font-family: "Gill Sans", sans-serif;
+ margin-bottom: 5px;
+ font-weight: 600;
+}

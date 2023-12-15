@@ -1,10 +1,11 @@
 import React from "react";
+import Navbar from "../../Components/Navbar";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const ProfilePage = () => {
   return (
-    <div>
-      <h1>Merhaba, ProfilePage!</h1>
+    <div  className="root">
+      <Navbar/>
     </div>
   );
 };

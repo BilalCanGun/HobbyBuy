@@ -1,30 +1,42 @@
 import React, { useState } from "react";
-import { auth } from "../fireabase";
+import { projectAuth } from "../firebase/config";
 import "./style.css";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import userLogin from "../auth/userLogin";
+import { useNavigate, useLocation } from "react-router-dom";
 
-const Login = () => {
+const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
 
-  const signIn = (e) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "home";
+
+  const { error, login } = userLogin();
+
+  const handleLogin = async (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    await login(email, password);
+    if (!error) {
+      navigate(from, { replace: true });
+      setEmail("");
+      setPassword("");
+      return;
+    } else {
+      setErrorMessage(error);
+    }
   };
 
-  const handleClick=()=>{
-    window.location.href = '/register';
-    }
+  const [showPassword, setShowPassword] = useState(false);
+  const handleCheckboxChange = (password) => {
+    setShowPassword(!showPassword);
+  };
 
   return (
     <div className="login-root">
-      <form onSubmit={signIn}>
+      <form onSubmit={handleLogin}>
         <h2 className="login-header">Hobby Buy'a Hoşgeldiniz</h2>
 
         <div className="login-left">
@@ -36,19 +48,28 @@ const Login = () => {
             className="login-input"
           />
           <input
-            type="password"
+            type={showPassword ? "text" : "password"}
             placeholder="Şifre giriniz..."
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="login-input"
           />
+          {error && <p>{errorMessage}</p>}
+          <label className="login-showp">
+            <input
+              type="checkbox"
+              checked={showPassword}
+              onChange={handleCheckboxChange}
+            />
+            Şifreyi Göster
+          </label>
           <div className="login-container-button">
-          <button type="submit" className="login-button">
-            Giriş Yap
-          </button>
-          <button type="" className="login-button" onClick={handleClick}> 
-            Kayıt ol
-          </button>
+            <button type="submit" className="login-button">
+              Giriş Yap
+            </button>
+            <button type="" className="login-button" onClick={props.toggleForm}>
+              Hesabım Yok
+            </button>
           </div>
         </div>
 
@@ -58,7 +79,6 @@ const Login = () => {
             alt="image"
             className="login-img"
           />
-          
         </div>
       </form>
     </div>
