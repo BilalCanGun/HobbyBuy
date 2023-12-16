@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { HiOutlineShoppingCart } from "react-icons/hi2";
 import './navbar.css'
 import userLogOut from '../auth/userLogOut'
 import { useNavigate } from 'react-router-dom'
@@ -34,13 +35,14 @@ const Navbar = () => {
             <li>
               <NavLink  to="/home">Ana Sayfa</NavLink>
             </li>
-            <li>
-              <NavLink to="/basket">Sepet</NavLink>
-            </li>
+           
             <li>
               <NavLink to="/profile">Profilim</NavLink>
             </li>
-            <li onClick={handleLogOut}>
+            <li>
+              <NavLink to="/basket">Sepetim<HiOutlineShoppingCart size='20'/></NavLink>
+            </li>
+            <li onClick={handleLogOut} className='nav-elements'>
                   Çıkış Yap
             </li>
           </ul>

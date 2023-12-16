@@ -65,3 +65,64 @@ form{
  margin-bottom: 5px;
  font-weight: 600;
 }
+.test-container{
+  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: 2px solid black;
+  padding: 20px;
+ box-sizing: border-box;
+ background-color: #ffff;
+ max-width: 600px;
+ max-height: 300px;
+margin-top: 17%;
+background: linear-gradient(to right, #353836, #ADD8E6);
+
+
+}
+.test-question{
+  font-family: 'Gill Sans';
+  font-weight: 600;
+}
+.test-buttons{
+  display: flex;
+  flex-direction: row; 
+  width: 300px;
+  height: auto; 
+  margin-top: 20px;
+}
+.test-single-button{
+  width: 80%;
+  padding: 10px;
+  margin-left: 10px;/* buton boşlukları */
+  margin-right: 10px;
+ 
+}
+.test-result{
+  font-weight: 800;
+}
+.test-next{
+  width: 70%;
+  padding: 10px;
+  margin-left: 10px;/* buton boşlukları */
+  margin-right: 10px;
+  border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to right, #353836, #ADD8E6);
+
+}
+.test-prev{
+  width: 70%;
+  padding: 10px;
+  margin-left: 10px;/* buton boşlukları */
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to right, #353836, #ADD8E6);
+}

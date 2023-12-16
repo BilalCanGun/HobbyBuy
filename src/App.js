@@ -11,7 +11,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<LoginPage />} />
-      
+      <Route path="/home" element={<HomePage />} />
       <Route element={<PrivateRouteLayout/>}>
       <Route path="/home" element={<HomePage />} />
       <Route path="/profile" element={<ProfilePage />} />
