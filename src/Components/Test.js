@@ -42,67 +42,63 @@ export const Test = () => {
       seyahat: 0,
       kamp: 0,
     };
-
-    if (answers[currentQuestionIndex] === "Evet") {
+  
+    if (answers[0] === "Evet") {
       degerler.Resim += 10;
       degerler.fotografcilik += 10;
       degerler.dans += 10;
     }
-    if (answers[currentQuestionIndex] === "Evet") {
-      degerler.fitness += 10;
+    if (answers[1] === "Evet") {
+      degerler.fitness += 20;
       degerler.oyun -= 5;
     }
-    if (answers[currentQuestionIndex] === "Evet") {
+    if (answers[2] === "Evet") {
       degerler.oyun += 10;
     }
-    if (answers[currentQuestionIndex] === "Evet") {
+    if (answers[3] === "Evet") {
       degerler.kamp += 5;
       degerler.bahce += 5;
     }
-    if (answers[currentQuestionIndex] === "Evet") {
+    if (answers[4] === "Evet") {
       degerler.yemek += 10;
     }
-    if (answers[currentQuestionIndex] === "Evet") {
+    if (answers[5] === "Evet") {
       degerler.fotografcilik += 10;
       degerler.Resim += 10;
     }
-    if (answers[currentQuestionIndex] === "Evet") {
+    if (answers[6] === "Evet") {
       degerler.bahce += 10;
     }
-    if (answers[currentQuestionIndex] === "Evet") {
+    if (answers[7] === "Evet") {
       degerler.oyun += 20;
     }
-    if (answers[currentQuestionIndex] === "Evet") {
+    if (answers[8] === "Evet") {
       degerler.seyahat += 20;
       degerler.kamp += 10;
     }
-    if (answers[currentQuestionIndex] === "Evet") {
+    if (answers[9] === "Evet") {
       degerler.seyahat += 10;
       degerler.kamp += 10;
     }
-    // Degerleri dizie çevir
-    var degerDizisi = Object.entries(degerler);
-    //büyükten küçüğe sıral
-    degerDizisi.sort(function (a, b) {
-      return b[1] - a[1];
-    });
-    // ilk 5 değeri seçildi
-    var enYuksek5Degerler = degerDizisi.slice(0, 5);
-    // Sonuç dizisine aktar
-    var sonucDizisi = [];
-    enYuksek5Degerler.forEach(function (deger) {
-      sonucDizisi.push(deger[0]);
-    });
 
+    const sortedResults = Object.entries(degerler).sort((a, b) => b[1] - a[1]).slice(0, 5);
+    // Tüm değerleri göster
+    console.log("Tüm Değerler:", degerler);
+  
     //bu fonksiyonda tüm hobileri gezip baş harflerini büyük harfe çevirip + hobisi yazoyrum
-    const formattedResults = sonucDizisi.map((result) => {
-      return result.charAt(0).toUpperCase() + result.slice(1) + " Hobisi";
+    const formattedResults = sortedResults.map(([key]) => {
+      const hobbyString = key.charAt(0).toUpperCase() + key.slice(1) + " Hobisi: " ;
+      return hobbyString + " ";
     });
-    console.log(enYuksek5Degerler)
+  
+    console.log("Sonuçlar:", formattedResults);
+    
+  
     const result = answers.filter((answer) => answer === "Evet").length;
-
+  
     return formattedResults;
   };
+  
 
   const handleNextQuestion = () => {
     setCurrentQuestionIndex((prevIndex) =>
@@ -125,7 +121,7 @@ export const Test = () => {
       {showResult ? (
         <>
           <p className="test-result">
-            En Yakın Olduğunuz 5 Hobi: {calculateResult().join(", ")}
+            En Yakın Olduğunuz 5 Hobi:<br/> {calculateResult().join(", ")}
           </p>
           <button className="test-restart" onClick={handleRestartTest}>
             Testi Yeniden Başlat
