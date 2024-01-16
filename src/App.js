@@ -5,17 +5,21 @@ import PrivateRouteLayout from "./PrivateRouteLayout";
 import LoginPage from "./Pages/LoginPage/Loginpage";
 import HomePage from "./Pages/HomePage/HomePage";
 import ProfilePage from "./Pages/ProfilePage/ProfilePage";
-import BasketPage from "./Pages/BasketPage/BasketPage";
+
+import HobbyMarketPage from "./Pages/HobbyMarketPage/HobbyMarketPage";
+import HobbyPage from "./Pages/HobbyPage/HobbyPage";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<LoginPage />} />
       <Route path="/home" element={<HomePage />} />
-      <Route element={<PrivateRouteLayout/>}>
-      <Route path="/home" element={<HomePage />} />
-      <Route path="/profile" element={<ProfilePage />} />
-      <Route path="/basket" element={<BasketPage />} />
+      <Route path="/market" element={<HobbyMarketPage />} />
+      <Route path="/hobbys" element={<HobbyPage />} />
+      <Route element={<PrivateRouteLayout />}>
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+       
       </Route>
     </Routes>
   );

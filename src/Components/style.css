@@ -126,3 +126,42 @@ background: linear-gradient(to right, #353836, #ADD8E6);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background: linear-gradient(to right, #353836, #ADD8E6);
 }
+.product-card-container { 
+   display: inline-flex;
+   text-align: center;
+   padding-right: 2%;
+   padding-left: 2%;
+}
+
+.product-card {
+  border: 2px solid black;
+  border-radius: 10%;
+  margin-top: 10%;
+  background-color:#ADD8E6;
+  
+}
+.product-cardp {
+  padding-left: 9%;
+  padding-top: 5%;
+  background-color: #6683be;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+
+.product-card-img {
+ max-width: 250px;
+ max-height: 250px;
+ border: 2px solid skyblue;
+  border-radius: 10%;
+}
+
+.product-card-name {
+ 
+ 
+}
+.product-list-welcome{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  padding-top: 20%;
+}
+

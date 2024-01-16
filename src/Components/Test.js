@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { HiArrowRight,HiArrowLeft } from "react-icons/hi2";
+import { HiArrowRight, HiArrowLeft } from "react-icons/hi2";
 import "./style.css";
 
 export const Test = () => {
@@ -86,7 +86,7 @@ export const Test = () => {
     degerDizisi.sort(function (a, b) {
       return b[1] - a[1];
     });
-    // ilk 5 değeri seçildi 
+    // ilk 5 değeri seçildi
     var enYuksek5Degerler = degerDizisi.slice(0, 5);
     // Sonuç dizisine aktar
     var sonucDizisi = [];
@@ -96,9 +96,9 @@ export const Test = () => {
 
     //bu fonksiyonda tüm hobileri gezip baş harflerini büyük harfe çevirip + hobisi yazoyrum
     const formattedResults = sonucDizisi.map((result) => {
-        return result.charAt(0).toUpperCase() + result.slice(1) + " Hobisi";
-      });
-    
+      return result.charAt(0).toUpperCase() + result.slice(1) + " Hobisi";
+    });
+    console.log(enYuksek5Degerler)
     const result = answers.filter((answer) => answer === "Evet").length;
 
     return formattedResults;
@@ -120,14 +120,13 @@ export const Test = () => {
     setShowResult(false);
   };
 
- 
-
-
   return (
     <div className="test-container">
       {showResult ? (
         <>
-          <p className="test-result">En Yakın Olduğunuz 5 Hobi: {calculateResult().join(", ")}</p>
+          <p className="test-result">
+            En Yakın Olduğunuz 5 Hobi: {calculateResult().join(", ")}
+          </p>
           <button className="test-restart" onClick={handleRestartTest}>
             Testi Yeniden Başlat
           </button>
@@ -152,13 +151,11 @@ export const Test = () => {
           <div className="test-buttons">
             <button className="test-prev" onClick={handlePrevQuestion}>
               {" "}
-
-             <HiArrowLeft size='20' />
+              <HiArrowLeft size="20" />
             </button>
             <button className="test-next" onClick={handleNextQuestion}>
               {" "}
-              <HiArrowRight size='20'/>
-            {" "}
+              <HiArrowRight size="20" />{" "}
             </button>
           </div>
         </>

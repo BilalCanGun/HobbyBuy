@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
+ 
 }
 
 .navbar {
@@ -50,8 +50,8 @@ body {
 
 .nav-elements ul a {
   font-size: 21px;
-  font-weight: 400;
-  color: #2f234f;
+  font-weight: 500;
+  color: black;
   text-decoration: none;
 }
 
@@ -70,6 +70,8 @@ body {
   height: 2px;
   background-color: gray;
 }
+
+
 
 @media (max-width: 768px) {
   .nav-elements ul li:not(:last-child) {
