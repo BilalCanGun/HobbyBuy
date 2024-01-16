@@ -8,8 +8,8 @@ const ProductCard = ({ product, onAddToCart }) => {
 <img className='product-card-img' src={process.env.PUBLIC_URL + product.img} alt={product.name} />
       <h3 className='product-card-name'>{product.name}</h3>
       <p className='product-card-desc'>{product.description}</p>
-      <p className='product-card-price'>Fiyat: ${product.price}</p>
-      <button className='product-card-btn' onClick={() => onAddToCart(product)}>Add to Cart</button>
+      <p className='product-card-price'>Fiyat: {product.price}₺</p>
+      <button className='product-card-btn' onClick={() => onAddToCart(product)}>Sepete Ekle</button>
       </div>
     </div>
   );

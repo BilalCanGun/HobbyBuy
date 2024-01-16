@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Register from "../../Components/Register";
 import Login from "../../Components/Login";
 import './Login.css'
+import { Footer } from "../../Components/Footer";
 
 const LoginPage = () => {
  const [toggle,setToggle] = useState(true);
@@ -17,6 +18,7 @@ setToggle(!toggle)
       <Login toggleForm={handleToggle}/>:
       <Register toggleForm={handleToggle}/>
 }
+   
     </div>
   );
 };

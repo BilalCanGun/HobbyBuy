@@ -40,6 +40,10 @@ const Navbar = ({onToggleShoppingCart}) => {
               <NavLink to="/home">Ana Sayfa</NavLink>
             </li>
             <li>
+              {" "}
+              <NavLink to="/hobbys">Hobiler</NavLink>
+            </li>
+            <li>
               <NavLink to="/market" >Hobby Market</NavLink>
             </li>
 
@@ -52,6 +56,8 @@ const Navbar = ({onToggleShoppingCart}) => {
                 <HiOutlineShoppingCart size="20" />
               </NavLink>
             </li>
+          
+
             <li onClick={handleLogOut} className="nav-elements">
             <IoExitOutline size='30'/>
             </li>

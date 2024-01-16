@@ -1,6 +1,6 @@
-.root {
+.h-root {
     background-image: url(../../../public/background.png);
-     height: 100vmax;
+     height: max-content;
     
   }
 

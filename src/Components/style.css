@@ -1,72 +1,62 @@
-.login-root{
-    display: flex;
+.login-root {
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  
- 
 }
-.login-header{
-    font-family: "Gill Sans", sans-serif;
-    size: 60px;
-    font-size: 50px;
+.login-header {
+  font-family: "Gill Sans", sans-serif;
+  size: 60px;
+  font-size: 50px;
 }
-form{
-    
-    display: flex;
-    align-items: center;
-    width: 800px; 
-    height: 500px;
-    
-  
-    
+form {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  height: 500px;
 }
-.login-left{
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-
+.login-left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
 }
-.login-input{
-    width: 250px;
+.login-input {
+  width: 250px;
   height: 40px;
   margin-bottom: 10px;
   border-radius: 40px;
-
 }
-.login-right{
-    display: flex;
+.login-right {
+  display: flex;
   flex-direction: column;
-
 }
-.login-img{
-    width: 200px;
-    height: auto; /* Genişliğe uyumlu olarak ayarlayın */
-    margin-bottom: 10px;
-    border-radius: 600px;
-
+.login-img {
+  width: 200px;
+  height: auto; /* Genişliğe uyumlu olarak ayarlayın */
+  margin-bottom: 10px;
+  border-radius: 600px;
 }
-.login-button{
-    width: 98%;
-    height: 40px;
-    border-radius: 10px;
-    margin-right: 20px;
-    background-color:#6683be;
-    font-size: 18px;
-    font-family: "Gill Sans", sans-serif;
-
+.login-button {
+  width: 98%;
+  height: 40px;
+  border-radius: 10px;
+  margin-right: 20px;
+  background-color: #6683be;
+  font-size: 18px;
+  font-family: "Gill Sans", sans-serif;
 }
-.login-container-button{
-    display: flex;
+.login-container-button {
+  display: flex;
   justify-content: space-between;
 }
-.login-showp{
+.login-showp {
   font-family: "Gill Sans", sans-serif;
- margin-bottom: 5px;
- font-weight: 600;
+  margin-bottom: 5px;
+  font-weight: 600;
 }
-.test-container{
-  padding-top: 10%;
+.test-container {
+  
+ 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,94 +64,279 @@ form{
   margin: auto;
   border: 2px solid black;
   padding: 20px;
- box-sizing: border-box;
- background-color: #ffff;
- max-width: 600px;
- max-height: 300px;
-margin-top: 17%;
-background: linear-gradient(to right, #353836, #ADD8E6);
-
-
+  box-sizing: border-box;
+  background-color: #ffff;
+  max-width: 600px;
+  max-height: 300px;
+  margin-top: 10%;
+  margin-bottom: 17%;
+  background: linear-gradient(to right, #353836, #add8e6);
 }
-.test-question{
-  font-family: 'Gill Sans';
+.test-question {
+  font-family: "Gill Sans";
   font-weight: 600;
 }
-.test-buttons{
+.test-buttons {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   width: 300px;
-  height: auto; 
+  height: auto;
   margin-top: 20px;
 }
-.test-single-button{
+.test-single-button {
   width: 80%;
   padding: 10px;
-  margin-left: 10px;/* buton boşlukları */
+  margin-left: 10px; /* buton boşlukları */
   margin-right: 10px;
- 
 }
-.test-result{
+.test-result {
   font-weight: 800;
 }
-.test-next{
+.test-next {
   width: 70%;
   padding: 10px;
-  margin-left: 10px;/* buton boşlukları */
+  margin-left: 10px; /* buton boşlukları */
   margin-right: 10px;
   border-radius: 10px;
   border-radius: 10px;
   border: 2px solid gray;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to right, #353836, #ADD8E6);
-
+  background: linear-gradient(to right, #353836, #add8e6);
 }
-.test-prev{
+.test-prev {
   width: 70%;
   padding: 10px;
-  margin-left: 10px;/* buton boşlukları */
+  margin-left: 10px; /* buton boşlukları */
   margin-right: 10px;
   border-radius: 10px;
   border: 2px solid gray;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to right, #353836, #ADD8E6);
+  background: linear-gradient(to right, #353836, #add8e6);
 }
-.product-card-container { 
-   display: inline-flex;
-   text-align: center;
-   padding-right: 2%;
-   padding-left: 2%;
+.product-card-container {
+  display: inline-flex;
+  text-align: center;
+  padding-right: 2%;
+  padding-left: 2%;
 }
 
 .product-card {
   border: 2px solid black;
   border-radius: 10%;
   margin-top: 10%;
-  background-color:#ADD8E6;
-  
+  background-color: #add8e6;
+  width: 250px;
+  height: 400px;
 }
 .product-cardp {
   padding-left: 9%;
   padding-top: 5%;
-  background-color: #6683be;
+  background-color: gray;
   margin-right: 10%;
   margin-left: 10%;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-
 .product-card-img {
- max-width: 250px;
- max-height: 250px;
- border: 2px solid skyblue;
+  max-width: 250px;
+  max-height: 200px;
+  border: 2px solid skyblue;
   border-radius: 10%;
 }
 
-.product-card-name {
- 
- 
+.product-card-btn {
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  border: 2px solid gray;
+
+  background: linear-gradient(to right, #353836, #add8e6);
 }
-.product-list-welcome{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-  padding-top: 20%;
+.product-list-welcome {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.h2welcome {
+  text-align: center;
+  padding-right: 10%;
+}
+.starter-container {
+  margin: 1%;
+  width: 100%;
+  padding: 1%;
+  background-color: #ffff;
+}
+.starter-header {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+.about-container {
+  margin-top: 5%;
+  background-color: #ffff;
+  max-width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  border: 0.5px solid black;
+}
+.about-desc-img {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.about-header {
+  padding-top: 2%;
+  text-align: center;
+  margin: auto;
+  font-family: "Courier New", Courier, monospace;
+}
+.about-desc {
+  padding: 5%;
+  max-width: 400px;
+}
+.about-img {
+  padding-top: 5%;
+  max-width: 400px;
+  height: 400px;
+}
+.footer {
+  margin-top: 2%;
+  background-color: #353836;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 5%;
+}
+.footer-img {
+  width: 100px;
+  height: 100px;
+  padding: 2%;
+  margin-bottom: 10px;
+  border-radius: 600px;
+}
+.sepet-root {
+  width: 80%;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 4%;
+  border: 0.5px solid black;
 }
 
+.sepet-header {
+  padding: 2%;
+  text-align: center;
+}
+
+.sepet-container {
+  background-color: #ffff;
+  align-items: center;
+}
+
+.cart-item {
+  align-items: center;
+  background-color: #fff;
+  max-width: 93%;
+  max-height: 300px;
+  border-radius: 20px;
+  border: 0.5px solid black;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+
+}
+
+.cart-img {
+  max-width: 150px;
+  max-height: 150px;
+  margin-right: 20px;
+}
+
+.cart-name {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.cart-price {
+  font-size: 40px;
+}
+
+.remove-button {
+  width: 100px; /* Örnek genişlik değeri, ihtiyacınıza göre ayarlayın */
+  height: 40px; /* Örnek yükseklik değeri, ihtiyacınıza göre ayarlayın */
+  background-color: #6683be;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4%;
+}
+.user-container{
+  margin-top: 3%;
+  width:80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  background-color: #ffff;
+  border: 0.5px solid black;
+}
+.user-header{
+  padding: 1%;
+  text-align: center;
+}
+.user-info-container{
+  padding: 1%;
+margin-left: 5%;
+margin-right: 5%;
+border: 0.5px solid black;
+}
+.user-info-name{
+
+}
+.user-info-surname{
+
+}
+.user-info-email{
+
+}
+.user-info-password{
+
+}
+.user-info-adrescontainer{
+  padding: 1%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 0.5px solid black;
+}
+.user-info-adress{
+
+}
+
+.user-kaydet{
+  width: 150px;
+  height: 60px;
+  border-radius: 20px;
+  border:  solid #353836 2px;
+  background-color: #353836;
+  margin: 2%;
+  margin-left: 5%;
+}
+.user-iptal{
+  width: 150px;
+  height: 60px;
+  border-radius: 20px;
+  border:  solid #353836 2px;
+  background-color: #353836;
+  margin: 2%;
+  margin-left: 5%;
+}
+.user-duzen{
+  width: 150px;
+  height: 60px;
+  border-radius: 20px;
+  border:  solid #353836 2px;
+  background-color: #353836;
+  margin: 2%;
+  margin-left: 5%;
+}
